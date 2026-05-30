@@ -16,3 +16,8 @@ def char_count(text: str, *, include_spaces: bool = True) -> int:
     if include_spaces:
         return len(text)
     return len("".join(text.split()))
+
+
+def reverse_words(text: str) -> str:
+    """Return *text* with whitespace-separated words in reverse order."""
+    return " ".join(reversed(text.split()))
