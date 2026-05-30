@@ -25,3 +25,7 @@ def test_reverse_words_reverses_sentence_word_order():
 
 def test_reverse_words_empty_string_stays_empty():
     assert reverse_words("") == ""
+
+
+def test_reverse_words_normalizes_mixed_whitespace():
+    assert reverse_words("  hello\tworld   foo  ") == "foo world hello"
