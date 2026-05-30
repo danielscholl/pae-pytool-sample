@@ -8,6 +8,11 @@ def word_count(text: str) -> int:
     return len(text.split())
 
 
+def line_count(text: str) -> int:
+    """Return the count of non-empty lines in *text*."""
+    return sum(1 for line in text.splitlines() if line.strip())
+
+
 def char_count(text: str, *, include_spaces: bool = True) -> int:
     """Return the number of characters in *text*.
 
