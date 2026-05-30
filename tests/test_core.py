@@ -1,4 +1,4 @@
-from pae_pytool.core import char_count, word_count
+from pae_pytool.core import char_count, reverse_words, word_count
 
 
 def test_word_count_counts_whitespace_separated_words():
@@ -17,3 +17,11 @@ def test_char_count_includes_spaces_by_default():
 
 def test_char_count_can_exclude_spaces():
     assert char_count("hello world", include_spaces=False) == 10
+
+
+def test_reverse_words_reverses_sentence_word_order():
+    assert reverse_words("hello world foo") == "foo world hello"
+
+
+def test_reverse_words_empty_string_stays_empty():
+    assert reverse_words("") == ""
